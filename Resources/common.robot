@@ -16,10 +16,10 @@ ${search_btn}  //input[@value="Google Search"]
 Start Test
     open browser  ${URL}  ${BROWSER}
     set window size  1200  800  #You don't have to do this, but I like to do this because that way I get consistent results
-#    open eyes session  ${URL}  ${APPLITOOLS_APP_NAME}  ${APPLITOOLS_BATCH}  ${API}  browsername=${BROWSER}  matchlevel=LAYOUT   includeEyesLog=True  httpDebugLog=True  #This keyword creates a tunnel to Applitools and sets all the relevant parameters in the Applitools webapp
+    open eyes session  ${URL}  ${APPLITOOLS_APP_NAME}  ${APPLITOOLS_BATCH}  ${API}  browsername=${BROWSER}  matchlevel=LAYOUT   includeEyesLog=True  httpDebugLog=True  #This keyword creates a tunnel to Applitools and sets all the relevant parameters in the Applitools webapp
 
 End Test
-#    close eyes session
+    close eyes session
     close browser
 
 Run your RF tests
@@ -28,14 +28,14 @@ Run your RF tests
 
 Take screenshots
     wait until page contains  Cat
-#    check eyes window  Search_Results_Cats  True
+    check eyes window  Search_Results_Cats  True
 
 Set ignore region from test
     go to  ${URL}
     Run your RF tests
-#    check eyes window ignore region by selector  CSS SELECTOR  .sbico-c  Search_btn  #You need to specify the type of selector, and then the value of the selector
+    check eyes window ignore region by selector  CSS SELECTOR  .sbico-c  Search_btn  #You need to specify the type of selector, and then the value of the selector
 
 Take screenshot of specific region
     go to  ${URL}
     Run your RF tests
-#    check eyes region by selector  XPATH  //*[@class="sbico-c"]  Search_btn
+    check eyes region by selector  XPATH  //*[@class="sbico-c"]  Search_btn
